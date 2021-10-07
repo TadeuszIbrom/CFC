@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <script defer src="js/script.js"></script>
+  <title>Document</title>
+</head>
+
+<body class="body">
+
+  <form action="" method="POST" class="js-formElement form">
+    <fieldset class="form__fieldset">
+      <legend class="form__legend">Podaj wielkość matrycy twojego aparatu</legend>
+      <ul>
+        <li>
+          <label>
+            <input class="js-sensor" type="radio" name="sensor" value="medium6/6">Średni
+            format 6/6
+          </label>
+        </li>
+
+        <li>
+          <label>
+            <input class="js-sensor" type="radio" name="sensor" value="medium6/4">Średni
+            format 6/4
+          </label>
+        </li>
+        <li>
+          <label>
+            <input class="js-sensor" type="radio" name="sensor" value="apsc">APSC
+          </label>
+        </li>
+        <li>
+          <label>
+            <input class="js-sensor" type="radio" name="sensor" value="aps-h">APS-H
+            (Canon)
+          </label>
+        </li>
+        <li>
+          <label>
+            <input class="js-sensor" type="radio" name="sensor" value="3/4">Mikro 4/3
+          </label>
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset class="form__fieldset">
+      <legend class="form__legend">Podaj ogniskową twojego obiektywu</legend>
+      <input class="js-focalLenght" type="number" step="1" min="10" max="1200" value="50" />
+    </fieldset>
+    <p class="hiddenParagraph">
+      Zakładając na aparat z matrycą <span class="js-sensorResultElement"></span> obiektyw o ogniskowej
+      <span class="js-focalLenghtResult"></span>, uzyskasz ekwiwalent obiektywu o ogniskowej
+      <span class="js-quivalentResult"></span>, podpiętego do aparatu z matrycą pełnoklatkową (Full Frame 35 mm).
+    </p>
+  </form>
+
+</body>
+
+</html>
