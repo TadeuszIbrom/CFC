@@ -1,6 +1,6 @@
 # Calculating crop factor of camera sensor
 
-![Crop Factor Calculator] (images/CFC.png)
+![Crop-Factor-Calculator](images/CFC.png)
 ## Demo
 https://tadeuszibrom.github.io/CFC/
 ### Description
