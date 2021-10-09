@@ -2,16 +2,16 @@
 .body {
   background-color: bisque;
   color: #333;
+  background-image: url("../images/background.jpg");
+  background-position: center;
+  background-size: 30% ;
 
 }
 .form {
   padding: 50px;
   margin: 30px auto;
   max-width: 60%;
-  background-image: url("../images/background.jpg");
-  background-position: center;
-  background-size: cover ;
-  background-repeat: no-repeat;
+
 }
 .form__fieldset {
 
