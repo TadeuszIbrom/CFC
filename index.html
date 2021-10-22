@@ -4,8 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>"Crop Factor Calculator"</title>
-  
+  <title>"Crop Factor Calculator"</title>  
   <meta name="description" content="A small program that will allow you to calculate the focal length depending on the size of the sensor">
   
   <!-- Facebook Meta Tags -->
@@ -15,15 +14,16 @@
   <meta property="og:description" content="A small program that will allow you to calculate the focal length depending on the size of the sensor">
   <meta property="og:image" content="images/CFC.png">
   
-<link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicon.ico">
+  <script defer src="js/script.js"></script>
 
 
   <meta name="description" content="A small program that will allow you to calculate the focal length depending on the size of the sensor">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css"/>
 
-  <script defer src="js/script.js"></script>
+  
   
 </head>
 
@@ -35,31 +35,31 @@
       <ul>
         <li>
           <label>
-            <input class="js-sensor" type="radio" name="sensor" value="medium6/6">Średni
+            <input class="js-sensorSize" type="radio" name="sensor" value="medium6/6">Średni
             format 6/6
           </label>
         </li>
 
         <li>
           <label>
-            <input class="js-sensor" type="radio" name="sensor" value="medium6/4">Średni
+            <input class="js-sensorSize" type="radio" name="sensor" value="medium6/4">Średni
             format 6/4
           </label>
         </li>
         <li>
           <label>
-            <input class="js-sensor" type="radio" name="sensor" value="apsc">APSC
+            <input class="js-sensorSize" type="radio" name="sensor" value="apsc">APSC
           </label>
         </li>
         <li>
           <label>
-            <input class="js-sensor" type="radio" name="sensor" value="aps-h">APS-H
+            <input class="js-sensorSize" type="radio" name="sensor" value="aps-h">APS-H
             (Canon)
           </label>
         </li>
         <li>
           <label>
-            <input class="js-sensor" type="radio" name="sensor" value="3/4">Mikro 4/3
+            <input class="js-sensorSize" type="radio" name="sensor" value="3/4">Mikro 4/3
           </label>
         </li>
       </ul>
@@ -69,8 +69,8 @@
       <input class="js-focalLenght" type="number" step="1" min="10" max="1200" value="50" />
     </fieldset>
 
-    <p class="hiddenParagraph form__result">
-      Zakładając na aparat z matrycą <span class="js-sensorResultElement"></span> obiektyw o ogniskowej
+    <p class="js-hiddenParagraph hiddenParagraph form__result">
+      Zakładając na aparat z matrycą <span class="js-sensorSizeResult"></span> obiektyw o ogniskowej
       <span class="js-focalLenghtResult"></span>, uzyskasz ekwiwalent obiektywu o ogniskowej
       <span class="js-quivalentResult"></span>, podpiętego do aparatu z matrycą pełnoklatkową (Full Frame 35 mm).
     </p>
