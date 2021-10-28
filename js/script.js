@@ -1,16 +1,11 @@
-
 {
-  const formElement = document.querySelector(".js-formElement");
   let equivalent;
-
   const equivalentCalculitng = () => {
-   // const sensonrSize = document.querySelector(".js-sensorSize")
-
     const inputfocalElement = document.querySelector(".js-focalLenght");
     const sensorChecked = document.querySelector(".js-sensorSize:checked");
     let sensorCropFactor;
-    const sensorBiggerthenFF = () => inputfocalElement.value/sensorCropFactor;
-    const sensorsmallerThenFF = () => inputfocalElement.value*sensorCropFactor;
+    const sensorBiggerthenFF = () => inputfocalElement.value / sensorCropFactor;
+    const sensorsmallerThenFF = () => inputfocalElement.value * sensorCropFactor;
     if (sensorChecked) {
       switch (sensorChecked.value) {
         case "medium6/6":
@@ -42,28 +37,23 @@
     }
     return equivalent;
   }
-
-  formElement.addEventListener("input", () => {
-   // const SensorElement = document.querySelector(".js-sensor:checked");
+  const displayResult = () => {
     const hiddenParagraphElement = document.querySelector(".js-hiddenParagraph");
     const focalLenghtResult = document.querySelector(".js-focalLenghtResult");
     const focalLenghtElement = document.querySelector(".js-focalLenght");
     const equivalentResult = document.querySelector(".js-quivalentResult")
     const sensorSizeResult = document.querySelector(".js-sensorSizeResult")
-    equivalentCalculitng();
     sensorSizeResult.innerHTML = `<strong> ${sensorSize} <strong>`;
     focalLenghtResult.innerHTML = `<strong> ${Math.round(focalLenghtElement.value)}  mm <strong>`;
     equivalentResult.innerHTML = `<strong>${Math.round(equivalent)} mm</strong>`;
     hiddenParagraphElement.classList.remove("hiddenParagraph");
+  };
+  const init = () => {
+    const formElement = document.querySelector(".js-formElement");
+    formElement.addEventListener("input", () => {
+      equivalentCalculitng();
+      displayResult();
+    });
   }
-  );
-
-
-
-
-
+  init()
 };
-
-
-
-

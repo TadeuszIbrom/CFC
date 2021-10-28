@@ -12,4 +12,6 @@ A small program that will allow you to calculate the focal length depending on t
  - CSS
  - JS
  #### Changes
+ 
+ - refactornig js script
 - First version
